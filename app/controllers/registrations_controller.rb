@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController 
+
     def create 
         user = User.create!(
             name: params['user']['name'], 
@@ -18,4 +19,5 @@ class RegistrationsController < ApplicationController
             render json: { status: 500 }
         end
     end
+    
 end
