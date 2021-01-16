@@ -1,0 +1,77 @@
+<%= form_with(model: user_plant, local: true) do |form| %>
+  <% if user_plant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_plant.errors.count, "error") %> prohibited this user_plant from being saved:</h2>
+
+      <ul>
+        <% user_plant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_fav %>
+    <%= form.check_box :user_fav %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monograph_id %>
+    <%= form.number_field :monograph_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :common_name %>
+    <%= form.text_field :common_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plant_name %>
+    <%= form.text_field :plant_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personality %>
+    <%= form.text_field :personality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insight %>
+    <%= form.text_field :insight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :story_notes %>
+    <%= form.text_field :story_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :difficulty %>
+    <%= form.number_field :difficulty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunlight %>
+    <%= form.number_field :sunlight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :moisture %>
+    <%= form.number_field :moisture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

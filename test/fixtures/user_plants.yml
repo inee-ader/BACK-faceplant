@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  user_fav: false
+  monograph_id: 1
+  common_name: MyString
+  plant_name: MyString
+  image_url: MyString
+  personality: MyString
+  insight: MyString
+  story_notes: MyString
+  difficulty: 1
+  sunlight: 1
+  moisture: 1
+
+two:
+  user_id: 1
+  user_fav: false
+  monograph_id: 1
+  common_name: MyString
+  plant_name: MyString
+  image_url: MyString
+  personality: MyString
+  insight: MyString
+  story_notes: MyString
+  difficulty: 1
+  sunlight: 1
+  moisture: 1
