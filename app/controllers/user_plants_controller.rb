@@ -17,10 +17,6 @@ class UserPlantsController < ApplicationController
     @user_plant = UserPlant.new
   end
 
-  # GET /user_plants/1/edit
-  def edit
-  end
-
   # POST /user_plants
   # POST /user_plants.json
   def create
@@ -69,6 +65,6 @@ class UserPlantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_plant_params
-      params.require(:user_plant).permit(:user_id, :user_fav, :monograph_id, :common_name, :plant_name, :image_url, :personality, :insight, :story_notes, :difficulty, :sunlight, :moisture)
+      params.require(:user_plant).permit(:user_id, :user_fav, :monograph_id, :common_name, :plant_name, :image_url, :difficulty, :sunlight, :moisture)
     end
 end

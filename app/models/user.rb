@@ -5,5 +5,6 @@ class User < ApplicationRecord
     validates_uniqueness_of :email
 
     has_many :user_plant 
+    # is this plural user_plants?
 
 end
