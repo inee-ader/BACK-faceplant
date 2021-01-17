@@ -1,6 +1,6 @@
-class UserPlantSerializer < ActiveModel::Serializer
+class UserSerializer < ActiveModel::Serializer
 
     has_many :user_plants
-    attributes :id, :name, :username, :headline
+    attributes :id, :name, :username, :headline, :user_plants
     
 end

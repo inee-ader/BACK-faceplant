@@ -34,7 +34,6 @@ class UsersController < ApplicationController
 
     private
 
-    # should this be in registrationsn controller? 
     def user_params
         params.require(:user).permit(:name, :username, :headline)
     end
