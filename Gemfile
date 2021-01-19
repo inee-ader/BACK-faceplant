@@ -59,3 +59,5 @@ gem 'active_model_serializers'
 gem "faker", "~> 2.15"
 
 gem "rest-client", "~> 2.1"
+
+gem "dotenv-rails", "~> 2.7"
