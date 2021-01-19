@@ -5,8 +5,8 @@ class User < ApplicationRecord
     validates_uniqueness_of :email
 
     has_many :user_plants
-    # has_many :likes
-    # has_many :user_plants, through: :likes
+    has_many :likes
+    has_many :liked_plants, through: :likes, source: :user_plant
     
     # has_many :monographs, through: :user_plants 
 
