@@ -3,6 +3,7 @@ class UserPlantsController < ApplicationController
 
   def index
     @user_plants = UserPlant.all
+    render json: @user_plants
   end
 
   def show
@@ -16,15 +17,13 @@ class UserPlantsController < ApplicationController
 
   def create
     @user_plant = UserPlant.create!(user_plant_params)
-
-
     if @user_plant.save
       render json: {
         status: :created, 
         user_plant: @user_plant
     }
     else
-      format.json { render json: @user_plant.errors, status: :unprocessable_entity }
+      render json: { status: 500 }    
     end
   end
 

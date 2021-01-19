@@ -14,6 +14,7 @@ class RegistrationsController < ApplicationController
             icon: ''
         )
         if user
+            # api(user)
             session[:user_id] = user.id
             render json: {
                 status: :created, 
