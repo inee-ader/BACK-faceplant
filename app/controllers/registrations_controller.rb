@@ -4,6 +4,8 @@ class RegistrationsController < ApplicationController
     def create 
         name1 = [Faker::Space.moon, Faker::Space.planet, Faker::Space.galaxy, Faker::Space.constellation]
       
+        api 
+
         user = User.create!(
             name: params['user']['name'], 
             email: params['user']['email'], 
@@ -11,7 +13,7 @@ class RegistrationsController < ApplicationController
             password_confirmation: params['user']['password_confirmation'], 
             username: name1.sample.gsub(/\s+/, ""), 
             headline: params['user']['headline'], 
-            icon: ''
+            icon: api
         )
         if user
             # api(user)

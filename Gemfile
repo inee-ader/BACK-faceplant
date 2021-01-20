@@ -61,3 +61,7 @@ gem "faker", "~> 2.15"
 gem "rest-client", "~> 2.1"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "oauth", "~> 0.5.4"
+
+gem "noun-project-api", "~> 3.1"
