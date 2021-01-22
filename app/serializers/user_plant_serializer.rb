@@ -1,7 +1,8 @@
 class UserPlantSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  belongs_to :user 
+  belongs_to :user
+  has_many :likes
   has_many :user_likes, through: :likes, source: :user
   
 
