@@ -18,7 +18,7 @@ class UsersController < ApplicationController
         end   
     end
 
-    def show 
+    def show
         user = User.find(params[:id])
         render json: user
     end
@@ -33,9 +33,9 @@ class UsersController < ApplicationController
     end
 
     private
-    # should this be in registrationsn controller? 
+
     def user_params
-        params.require(:user).permit(:name, :username, :headline)
+        params.require(:user).permit(:name, :username, :headline, :icon)
     end
 
 end

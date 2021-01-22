@@ -1,15 +1,22 @@
 class RegistrationsController < ApplicationController 
 
+    
     def create 
+        name1 = [Faker::Space.moon, Faker::Space.planet, Faker::Space.galaxy, Faker::Space.constellation]
+      
+        api 
+
         user = User.create!(
             name: params['user']['name'], 
             email: params['user']['email'], 
             password: params['user']['password'], 
             password_confirmation: params['user']['password_confirmation'], 
-            username: params['user']['username'], 
-            headline: params['user']['headline']
+            username: name1.sample.gsub(/\s+/, ""), 
+            headline: params['user']['headline'], 
+            icon: api
         )
         if user
+            # api(user)
             session[:user_id] = user.id
             render json: {
                 status: :created, 

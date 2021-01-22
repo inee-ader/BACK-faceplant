@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_plant.user_id %>
+</p>
+
+<p>
+  <strong>User fav:</strong>
+  <%= @user_plant.user_fav %>
+</p>
+
+<p>
+  <strong>Monograph:</strong>
+  <%= @user_plant.monograph_id %>
+</p>
+
+<p>
+  <strong>Common name:</strong>
+  <%= @user_plant.common_name %>
+</p>
+
+<p>
+  <strong>Plant name:</strong>
+  <%= @user_plant.plant_name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @user_plant.image_url %>
+</p>
+
+<p>
+  <strong>Personality:</strong>
+  <%= @user_plant.personality %>
+</p>
+
+<p>
+  <strong>Insight:</strong>
+  <%= @user_plant.insight %>
+</p>
+
+<p>
+  <strong>Story notes:</strong>
+  <%= @user_plant.story_notes %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @user_plant.difficulty %>
+</p>
+
+<p>
+  <strong>Sunlight:</strong>
+  <%= @user_plant.sunlight %>
+</p>
+
+<p>
+  <strong>Moisture:</strong>
+  <%= @user_plant.moisture %>
+</p>
+
+<%= link_to 'Edit', edit_user_plant_path(@user_plant) %> |
+<%= link_to 'Back', user_plants_path %>
