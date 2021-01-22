@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
         endpoint = "https://api.thenounproject.com/collection/48081/icons"
 
         response = access_token.get(endpoint)
-        data = JSON.parse(response.body) 
+        data = JSON.parse(response.body)
+        console.log(response.body)
         
         data["icons"].sample["preview_url"]
 
