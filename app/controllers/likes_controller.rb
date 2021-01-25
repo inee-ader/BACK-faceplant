@@ -40,10 +40,8 @@ class LikesController < ApplicationController
   def update
     respond_to do |format|
       if @like.update(like_params)
-        format.html { redirect_to @like, notice: 'Like was successfully updated.' }
         format.json { render :show, status: :ok, location: @like }
       else
-        format.html { render :edit }
         format.json { render json: @like.errors, status: :unprocessable_entity }
       end
     end
