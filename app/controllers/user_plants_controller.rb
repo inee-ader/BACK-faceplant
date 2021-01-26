@@ -57,7 +57,7 @@ class UserPlantsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_plant_params
 
-      params.permit(:user_id, :user_fav, :user_icon, :user_name, :monograph_id, :common_name, :plant_name, :personality, :insight, :story_notes, :image, :difficulty, :sunlight, :moisture)
+      params.permit(:user_id, :user_fav, :user_icon, :user_name, :common_name, :plant_name, :personality, :insight, :story_notes, :image, :difficulty, :sunlight, :moisture)
 
       # params.require(:user_plant).permit(:user_id, :user_fav, :user_icon, :user_name, :monograph_id, :common_name, :plant_name, :personality, :insight, :story_notes, :image_url, :difficulty, :sunlight, :moisture)
     end
