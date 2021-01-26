@@ -65,3 +65,5 @@ gem "dotenv-rails", "~> 2.7"
 gem "oauth", "~> 0.5.4"
 
 gem "noun-project-api", "~> 3.1"
+
+gem "haikunator", "~> 1.1"
