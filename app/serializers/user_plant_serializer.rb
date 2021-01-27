@@ -10,7 +10,6 @@ class UserPlantSerializer < ActiveModel::Serializer
 
   def image 
     if object.image.attached?
-      puts rails_blob_path(object.image, only_path: true)
     return rails_blob_path(object.image, only_path: true)
     else
       return "no photo"

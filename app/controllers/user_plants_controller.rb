@@ -20,7 +20,7 @@ class UserPlantsController < ApplicationController
     if @user_plant.save
       render json: {
         status: :created, 
-        user_plant: @user_plant
+        user_plant: UserPlantSerializer.new(@user_plant)
     }
     else
       render json: { status: 500 }    
