@@ -28,15 +28,13 @@ class UserPlantsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @user_plant.update(user_plant_params)
-        format.json { render :show, status: :ok, location: @user_plant }
-        render json: {
-          status: :updated
-        }
-      else
-        format.json { render json: @user_plant.errors, status: :unprocessable_entity }
-      end
+    if @user_plant.update(user_plant_params)
+      render json: {
+        user_plant: @user_plant,
+        status: :updated
+      }
+    else
+      render json: @user_plant.errors, status: :unprocessable_entity 
     end
   end
 
@@ -57,7 +55,7 @@ class UserPlantsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_plant_params
 
-      params.permit(:user_id, :user_fav, :user_icon, :user_name, :common_name, :plant_name, :personality, :insight, :story_notes, :image, :difficulty, :sunlight, :moisture)
+      params.permit(:common_name, :plant_name, :personality, :insight, :story_notes, :image, :difficulty, :sunlight, :moisture, :user_id, :user_icon, :user_name)
 
       # params.require(:user_plant).permit(:user_id, :user_fav, :user_icon, :user_name, :monograph_id, :common_name, :plant_name, :personality, :insight, :story_notes, :image_url, :difficulty, :sunlight, :moisture)
     end
