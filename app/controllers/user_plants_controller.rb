@@ -30,7 +30,7 @@ class UserPlantsController < ApplicationController
   def update
     if @user_plant.update(user_plant_params)
       render json: {
-        user_plant: @user_plant,
+        user_plant: UserPlantSerializer.new(@user_plant),
         status: :updated
       }
     else
