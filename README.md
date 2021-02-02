@@ -1,7 +1,7 @@
 FACEPLANT
 
 README
-THIS IS THE FRONT-END PROGRAM; here is a link to the back-end: https://github.com/inee-ader/FRONT-faceplant
+THIS IS THE BACK-END PROGRAM; here is a link to the front-end: https://github.com/inee-ader/FRONT-faceplant
 
 DESCRIPTION
 YOUTUBE
