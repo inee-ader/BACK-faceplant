@@ -18,6 +18,5 @@ class ApplicationController < ActionController::Base
         
         data["icons"].sample["preview_url"]
 
-    end 
-
+    end
 end

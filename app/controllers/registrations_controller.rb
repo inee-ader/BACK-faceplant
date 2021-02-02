@@ -2,7 +2,7 @@ class RegistrationsController < ApplicationController
 
     
     def create 
-        name1 = [Faker::Space.moon, Faker::Space.planet, Faker::Space.galaxy, Faker::Space.constellation]
+        name1 = Haikunator.haikunate(0)
       
         api 
 
@@ -11,8 +11,7 @@ class RegistrationsController < ApplicationController
             email: params['user']['email'], 
             password: params['user']['password'], 
             password_confirmation: params['user']['password_confirmation'], 
-            username: name1.sample.gsub(/\s+/, ""), 
-            headline: params['user']['headline'], 
+            username: name1, 
             icon: api
         )
         if user
